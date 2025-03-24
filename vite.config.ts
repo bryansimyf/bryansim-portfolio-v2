@@ -11,6 +11,8 @@ export default defineConfig({
       "@": resolve(__dirname, "./src"), // '@' points to src/
       "@components": resolve(__dirname, "./src/components"),
       "@assets": resolve(__dirname, "./src/assets"),
+      "@constant": resolve(__dirname, "./src/constant"),
+      "@utils": resolve(__dirname, "./src/utils"),
     },
   },
 });

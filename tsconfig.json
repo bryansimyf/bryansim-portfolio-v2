@@ -4,10 +4,13 @@
     "moduleResolution": "bundler",
     "jsx": "react-jsx",
     "allowImportingTsExtensions": true,
+    "noEmit": true,
     "baseUrl": ".",
     "paths": {
+      "@/*": ["./src/*"],
       "@assets/*": ["src/assets/*"],
       "@components/*": ["src/components/*"],
+      "@constant/*": ["src/constant/*"],
       "@utils/*": ["src/utils/*"]
     }
   }
