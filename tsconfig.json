@@ -1,17 +1,29 @@
 {
   "compilerOptions": {
+    "target": "ES2022",
     "module": "ESNext",
     "moduleResolution": "bundler",
+    "strict": true,
+    "skipLibCheck": true,
     "jsx": "react-jsx",
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+
+    // "module": "ESNext",
+    // "moduleResolution": "bundler",
+    // "jsx": "react-jsx",
     "allowImportingTsExtensions": true,
     "noEmit": true,
-    "baseUrl": ".",
+
+    "baseUrl": "./",
     "paths": {
-      "@/*": ["./src/*"],
+      // "@/*": ["./src/*"],
       "@assets/*": ["src/assets/*"],
       "@components/*": ["src/components/*"],
       "@constant/*": ["src/constant/*"],
       "@utils/*": ["src/utils/*"]
     }
-  }
+  },
+  "include": ["src"], // Include only the `src` directory
+  "exclude": ["node_modules", "dist"] // Exclude unnecessary files
 }
