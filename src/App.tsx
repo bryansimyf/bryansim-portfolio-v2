@@ -1,6 +1,7 @@
 import Card from "@components/Card";
 import Dither from "@components/Dither";
 import NavBar from "@components/NavBar";
+import ProfileCard from "@components/ProfileCard";
 
 const App = () => {
   return (
@@ -25,9 +26,10 @@ const App = () => {
             </div>
           </div>
         </div> */}
-        <div className="container mx-auto max-w-2xl p-4">
-          <NavBar />
-          124=+
+        <NavBar />
+        <div className="container mx-auto max-w-2xl pt-20 px-4">
+          <ProfileCard />
+          <div className="h-[1280px]">1234</div>
         </div>
       </div>
     </>
