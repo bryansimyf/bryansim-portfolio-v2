@@ -1,7 +1,9 @@
+import { Briefcase, FolderOpen, User } from "lucide-react";
+
 export const NAV_ITEMS = [
-  { name: "About", href: "" },
-  { name: "Experience", href: "" },
-  { name: "Projects", href: "" },
+  { name: "About", href: "", icon: User },
+  { name: "Experience", href: "", icon: Briefcase },
+  { name: "Projects", href: "", icon: FolderOpen },
 ];
 
 // export const SOCIAL_ITEMS = [

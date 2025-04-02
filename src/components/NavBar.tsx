@@ -54,13 +54,14 @@ const NavBar = () => {
                 </Button>
               </DropdownMenuTrigger>
 
-              <DropdownMenuContent className="w-32">
+              <DropdownMenuContent className="w-30">
                 <DropdownMenuGroup>
                   {NAV_ITEMS.map((item) => (
                     <DropdownMenuItem
                       key={item.name}
                       onClick={() => console.log(item.name)}
                     >
+                      <item.icon />
                       <span>{item.name}</span>
                     </DropdownMenuItem>
                   ))}
