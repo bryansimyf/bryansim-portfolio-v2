@@ -7,7 +7,7 @@ import Profile from "@components/sections/Profile";
 const App = () => {
   return (
     <>
-      <div className="bg-charcoal-gray text-white min-h-[100dvh] font-poppins">
+      <div className="box-border  text-white min-h-[100dvh] font-poppins">
         {/* <div className="relative w-full h-screen overflow-hidden">
           <Dither
             className="!absolute inset-0 w-full h-full"
@@ -28,7 +28,7 @@ const App = () => {
           </div>
         </div> */}
         <NavBar />
-        <div className="flex flex-col gap-5 mx-auto max-w-2xl pt-20 px-4">
+        <div className="flex flex-col gap-5 mx-auto w-full max-w-3xl pt-20 px-4">
           <Profile />
           <Experience />
           <div className="h-[1280px]">Rest of the content</div>

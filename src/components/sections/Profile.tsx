@@ -1,4 +1,4 @@
-import { PERSONAL_DETAILS } from "@constant/index";
+import { PERSONAL_DETAILS } from "@constants/index";
 
 import ProfilePic from "@assets/images/profile-pic.jpeg";
 
@@ -46,7 +46,7 @@ const Profile = () => {
             </span>
           </div>
         </div>
-        <div id="profile-desc" className="font-light">
+        <div id="profile-desc" className="font-light text-gray-300">
           {PERSONAL_DETAILS.description}
         </div>
       </div>
