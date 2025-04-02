@@ -9,23 +9,23 @@ export const NAV_ITEMS = [
 // ]
 
 export const TECHSTACK_KEYS = {
-  JAVASCRIPT: "javascript",
-  TYPESCRIPT: "typescript",
-  PHP: "php",
-  REACT: "react",
-  NEXTJS: "next.js",
-  REACT_NATIVE: "react-native",
-  TAILWIND: "tailwind-css",
-  MUI: "mui",
-  SHADCN: "shadcn-ui",
+  JAVASCRIPT: "Javascript",
+  TYPESCRIPT: "Typescript",
+  PHP: "PHP",
+  REACT: "React",
+  NEXTJS: "Next.js",
+  REACT_NATIVE: "React Native",
+  TAILWIND: "Tailwind CSS",
+  MUI: "MUI",
+  SHADCN: "Shadcn UI",
   // REACT_HOOK_FORM: "react-hook-form",
-  REDUX: "redux",
-  ZUSTAND: "zustand",
-  VITE: "vite.js",
-  TANSTACK_QUERY: "tanstack-query",
-  LARAVEL: "laravel",
-  EXPRESS: "express.js",
-  MYSQL: "mysql",
+  REDUX: "Redux",
+  ZUSTAND: "Zustand",
+  VITE: "Vite.js",
+  TANSTACK_QUERY: "Tanstack Query",
+  LARAVEL: "Laravel",
+  EXPRESS: "Express.js",
+  MYSQL: "Mysql",
 };
 
 export const PERSONAL_DETAILS = {
@@ -35,7 +35,7 @@ export const PERSONAL_DETAILS = {
   slogan: "Engineering the frontend, enhancing the experience.",
   description:
     "I'm a software engineer with 4 years of experience, specializing in frontend development. I build scalable and high-performance web applications with modern technologies. 🚀",
-  experience: [
+  experiences: [
     {
       startDate: "2023",
       endDate: "",
@@ -52,6 +52,7 @@ export const PERSONAL_DETAILS = {
         TECHSTACK_KEYS.MUI,
         TECHSTACK_KEYS.REDUX,
         TECHSTACK_KEYS.VITE,
+        TECHSTACK_KEYS.MYSQL,
       ],
     },
     {

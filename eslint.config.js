@@ -32,17 +32,18 @@ export default tseslint.config(
             // React and built-in Node.js modules
             ["^react", "^(node:|@?\\w)"],
             // Third-party libraries (MUI, React Hook Form, Redux, etc.)
-            ["^@mui", "^@?react-hook-form", "^@redux"],
+            ["^[a-z]"],
+            // ["^@mui", "^@?react-hook-form", "^@redux"],
             // Store-related imports
-            ["^@/store(/.*|$)"],
+            ["^@store(/.*|$)"],
             // Hooks
-            ["^@/hooks(/.*|$)"],
+            ["^@hooks(/.*|$)"],
             // Layouts
-            ["^@/layouts(/.*|$)"],
+            ["^@layouts(/.*|$)"],
             // Constants
-            ["^@/constants(/.*|$)"],
+            ["^@constants(/.*|$)"],
             // Utils
-            ["^@/(utils|lib)(/.*|$)"],
+            ["^@(utils|lib)(/.*|$)"],
             // Components
             ["^@components(/.*|$)"],
             // Assets

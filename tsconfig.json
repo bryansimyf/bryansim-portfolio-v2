@@ -20,7 +20,7 @@
       // "@/*": ["./src/*"],
       "@assets/*": ["src/assets/*"],
       "@components/*": ["src/components/*"],
-      "@constant/*": ["src/constant/*"],
+      "@constants/*": ["src/constants/*"],
       "@utils/*": ["src/utils/*"],
       "@lib/*": ["src/lib/*"],
       "@providers/*": ["src/providers/*"]
