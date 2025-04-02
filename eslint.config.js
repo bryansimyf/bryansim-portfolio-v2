@@ -42,7 +42,7 @@ export default tseslint.config(
             // Constants
             ["^@/constants(/.*|$)"],
             // Utils
-            ["^@/utils(/.*|$)"],
+            ["^@/(utils|lib)(/.*|$)"],
             // Components
             ["^@components(/.*|$)"],
             // Assets

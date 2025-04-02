@@ -13,6 +13,8 @@ export default defineConfig({
       "@assets": resolve(__dirname, "./src/assets"),
       "@constant": resolve(__dirname, "./src/constant"),
       "@utils": resolve(__dirname, "./src/utils"),
+      "@lib": resolve(__dirname, "./src/lib"),
+      "@providers": resolve(__dirname, "./src/providers"),
     },
   },
 });

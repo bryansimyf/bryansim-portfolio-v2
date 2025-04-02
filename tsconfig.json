@@ -21,7 +21,9 @@
       "@assets/*": ["src/assets/*"],
       "@components/*": ["src/components/*"],
       "@constant/*": ["src/constant/*"],
-      "@utils/*": ["src/utils/*"]
+      "@utils/*": ["src/utils/*"],
+      "@lib/*": ["src/lib/*"],
+      "@providers/*": ["src/providers/*"]
     }
   },
   "include": ["src"], // Include only the `src` directory
