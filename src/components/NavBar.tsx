@@ -14,9 +14,20 @@ import {
 } from "./ui/DropdownMenu";
 
 const NavBar = () => {
+  const handleScrollToSection = (sectionId: string) => {
+    const section = document.getElementById(sectionId.slice(1));
+
+    if (section) {
+      section.scrollIntoView({
+        behavior: "smooth",
+        block: "start", // Align to the top of the viewport
+      });
+    }
+  };
+
   return (
     <nav className="backdrop-blur-md fixed w-full z-10">
-      <div className="max-w-3xl mx-auto p-2">
+      <div className="max-w-3xl mx-auto px-4 py-2 md:p-2">
         <div className="flex justify-between">
           {/* Logo/Brand */}
           <div className="flex-shrink-0 flex items-center">
@@ -59,7 +70,7 @@ const NavBar = () => {
                   {NAV_ITEMS.map((item) => (
                     <DropdownMenuItem
                       key={item.name}
-                      onClick={() => console.log(item.name)}
+                      onClick={() => handleScrollToSection(item.href)}
                     >
                       <item.icon />
                       <span>{item.name}</span>

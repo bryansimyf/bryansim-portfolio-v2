@@ -1,8 +1,8 @@
 import { Briefcase, FolderOpen, User } from "lucide-react";
 
 export const NAV_ITEMS = [
-  { name: "About", href: "", icon: User },
-  { name: "Experience", href: "", icon: Briefcase },
+  { name: "About", href: "#profile", icon: User },
+  { name: "Experience", href: "#experience", icon: Briefcase },
   { name: "Projects", href: "", icon: FolderOpen },
 ];
 
@@ -34,6 +34,8 @@ export const PERSONAL_DETAILS = {
   name: "Bryan Sim",
   position: "Software Engineer",
   location: "Kuala Lumpur & Petaling Jaya, Malaysia",
+  greetMessage:
+    "Hi, I'm a software engineer passionate about building great digital experiences.",
   slogan: "Engineering the frontend, enhancing the experience.",
   description:
     "I'm a software engineer with 4 years of experience, specializing in frontend development. I build scalable and high-performance web applications with modern technologies. 🚀",
@@ -64,7 +66,7 @@ export const PERSONAL_DETAILS = {
       company: "Komaci Network",
       title: "Software Engineer",
       description:
-        "Developed and improved Komaci, a data-driven micro-influencing solution, and EZlife, a social commerce management system with over 250 sellers and 210,000 transactions. Led UI/UX collaboration to create reusable components and pages, designed API and database structures, and planned seamless integrations for new features. Worked on API consumption, dynamic state updates, and contributed to backend enhancements and bug fixes.",
+        "Developed and improved Komaci (micro-influencing) and EZlife (social commerce, 250+ sellers, 210K+ transactions). Led UI/UX collaboration, built reusable components, designed APIs and database structures, and ensured seamless feature integrations. Worked on API consumption, dynamic state updates, and backend enhancements.",
       techStack: [
         TECHSTACK_KEYS.PHP,
         TECHSTACK_KEYS.JAVASCRIPT,

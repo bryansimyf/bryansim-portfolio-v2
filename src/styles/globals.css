@@ -134,9 +134,26 @@
   --color-rich-black: #0a0a0a;
 }
 
+@utility text-responsive-* {
+  --base: --value([integer]);
+  --min-factor: 0.75;
+  --max-factor: 1.5;
+  --vw-factor: 1;
+  font-size: clamp(
+    calc(var(--base) / 16 * var(--min-factor) * 1rem),
+    calc(var(--base) / 16 * var(--vw-factor) * 1vw),
+    calc(var(--base) / 16 * var(--max-factor) * 1rem)
+  );
+}
+
+@utility scroll-mt-nav {
+  scroll-margin-top: 60px;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
+    scroll-behavior: smooth;
   }
   body {
     @apply bg-charcoal-gray;
