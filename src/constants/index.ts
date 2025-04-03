@@ -3,7 +3,7 @@ import { Briefcase, FolderOpen, User } from "lucide-react";
 export const NAV_ITEMS = [
   { name: "About", href: "#profile", icon: User },
   { name: "Experience", href: "#experience", icon: Briefcase },
-  { name: "Projects", href: "", icon: FolderOpen },
+  { name: "Projects", href: "#projects", icon: FolderOpen },
 ];
 
 // export const SOCIAL_ITEMS = [
@@ -88,4 +88,4 @@ export const PERSONAL_DETAILS = {
   ],
 };
 
-export const PROJECTS_DETAILS = {};
+export const PROJECTS_DETAILS = [{ name: "", repoUrl: "", techStack: [] }];

@@ -29,7 +29,7 @@ const Profile = () => {
           <BottomFadeOverlay />
         </div>
         <div id="profile-content-wrapper" className="flex flex-col gap-6 p-2">
-          <div id="profile-content-header" className="flex gap-6">
+          <div id="profile-content-header" className="flex items-center gap-6">
             <img
               src={ProfilePic}
               alt="Profile Picture"
@@ -42,19 +42,21 @@ const Profile = () => {
             </div> */}
 
               <div>
-                <span className="font-extrabold">{PERSONAL_DETAILS.name}</span>{" "}
+                <span className="font-extrabold text-responsive-[24]">
+                  {PERSONAL_DETAILS.name}
+                </span>{" "}
                 |{" "}
                 <span className="font-medium">{PERSONAL_DETAILS.position}</span>
               </div>
+
+              {/* <span className="font-light text-sm">
+                Open to New Opportunities
+              </span> */}
 
               <div className="flex items-center gap-1 font-light text-sm">
                 <MapPin className="w-4.5 h-4.5" />
                 <p>{PERSONAL_DETAILS.location}</p>
               </div>
-
-              <span className="font-light text-sm">
-                Open to new opportunities
-              </span>
             </div>
           </div>
           <div id="profile-content-desc" className="font-light text-gray-300">

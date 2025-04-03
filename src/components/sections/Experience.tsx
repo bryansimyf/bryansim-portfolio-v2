@@ -1,5 +1,7 @@
 import { PERSONAL_DETAILS } from "@constants/index";
 
+import { Badge } from "@components/ui/Badge";
+
 const Experience = () => {
   const { experiences } = PERSONAL_DETAILS;
 
@@ -16,7 +18,7 @@ const Experience = () => {
               <div
                 key={index}
                 id="experience-timeline-item"
-                className="flex gap-10"
+                className="flex gap-5 md:gap-10"
               >
                 <div
                   id="experience-timeline-item-dot-line"
@@ -39,7 +41,7 @@ const Experience = () => {
 
                 <div
                   id="experience-timeline-item-content"
-                  className="flex flex-col gap-2 mt-1 mb-8 w-full"
+                  className="flex flex-col gap-2 pt-1 px-2 pb-8 w-full"
                 >
                   <span className="text-sm ">{experience.startDate}</span>
                   <p className="text-sm font-semibold">
@@ -51,12 +53,15 @@ const Experience = () => {
 
                   <div className="flex flex-wrap gap-2">
                     {experience.techStack.map((techStackItem, index) => (
-                      <div
-                        key={techStackItem}
-                        className="px-2 py-0.5 rounded-full border border-white/20 min-w-14 text-center"
-                      >
-                        <span className="text-xs">{techStackItem}</span>
-                      </div>
+                      <Badge key={techStackItem} variant="secondary">
+                        {techStackItem}
+                      </Badge>
+                      // <div
+                      //   key={techStackItem}
+                      //   className="px-2 py-0.5 rounded-full border border-white/20 min-w-14 text-center"
+                      // >
+                      //   <span className="text-xs">{techStackItem}</span>
+                      // </div>
                     ))}
                   </div>
                 </div>

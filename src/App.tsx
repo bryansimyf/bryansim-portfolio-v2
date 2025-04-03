@@ -1,8 +1,10 @@
 import NavBar from "@components/NavBar";
 import Experience from "@components/sections/Experience";
 import Profile from "@components/sections/Profile";
-import { BackgroundBeams } from "@components/ui/BackgroundBeams";
+import Projects from "@components/sections/Projects";
 import Dither from "@components/ui/Dither";
+import { ShootingStars } from "@components/ui/ShootingStars";
+import { StarsBackground } from "@components/ui/StarsBackground";
 
 const App = () => {
   return (
@@ -11,7 +13,8 @@ const App = () => {
         {/* <div className="absolute inset-0 -z-10">
           <BackgroundBeams />
         </div> */}
-        <BackgroundBeams />
+        <ShootingStars />
+        <StarsBackground />
         {/* <div className="relative w-full h-screen overflow-hidden">
           <Dither
             className="!absolute inset-0 w-full h-full"
@@ -35,6 +38,7 @@ const App = () => {
         <div className="relative z-1 flex flex-col gap-5 mx-auto w-full max-w-2xl pt-20 px-4">
           <Profile />
           <Experience />
+          <Projects />
           <div className="h-[1280px]">Rest of the content</div>
         </div>
       </div>
