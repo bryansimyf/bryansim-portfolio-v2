@@ -5,7 +5,7 @@ import { PERSONAL_DETAILS } from "@constants/index";
 import ProfilePic from "@assets/images/profile-pic.jpeg";
 
 import BottomFadeOverlay from "../common/BottomFadeOverlay";
-import Dither from "../Dither";
+import Dither from "../ui/Dither";
 
 const Profile = () => {
   return (
@@ -28,8 +28,8 @@ const Profile = () => {
           />
           <BottomFadeOverlay />
         </div>
-        <div className="flex flex-col gap-4">
-          <div className="flex gap-6">
+        <div id="profile-content-wrapper" className="flex flex-col gap-6 p-2">
+          <div id="profile-content-header" className="flex gap-6">
             <img
               src={ProfilePic}
               alt="Profile Picture"
@@ -57,7 +57,7 @@ const Profile = () => {
               </span>
             </div>
           </div>
-          <div id="profile-desc" className="font-light text-gray-300">
+          <div id="profile-content-desc" className="font-light text-gray-300">
             {PERSONAL_DETAILS.description}
           </div>
         </div>

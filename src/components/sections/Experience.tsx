@@ -5,7 +5,7 @@ const Experience = () => {
 
   return (
     <section id="experience" className="scroll-mt-nav">
-      <div id="experience-wrapper" className="flex flex-col gap-4 ">
+      <div id="experience-wrapper" className="flex flex-col gap-4 p-2">
         <p className="font-semibold text-lg">Experience</p>
 
         <div id="experience-timeline">
