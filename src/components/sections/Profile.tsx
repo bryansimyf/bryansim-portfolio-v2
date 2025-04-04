@@ -42,7 +42,7 @@ const Profile = () => {
             </div> */}
 
               <div>
-                <span className="font-extrabold text-responsive-[24]">
+                <span className="font-extrabold text-responsive-8">
                   {PERSONAL_DETAILS.name}
                 </span>{" "}
                 |{" "}

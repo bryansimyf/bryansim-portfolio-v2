@@ -134,23 +134,13 @@
   --color-rich-black: #0a0a0a;
 }
 
-/* text-responsive-[24] */
-/* @utility text-responsive-* {
-  --base: --value(--text- *);
-  --min-factor: 0.75;
-  --max-factor: 1.5;
-  --vw-factor: 1;
-  font-size: clamp(
-    calc(var(--base) / 16 * var(--min-factor) * 1rem),
-    calc(var(--base) / 16 * var(--vw-factor) * 1vw),
-    calc(var(--base) / 16 * var(--max-factor) * 1rem)
-  );
-} */
+/* text-responsive-2 */
 @utility text-responsive-* {
-  --base: --value([integer]);
+  --base: calc(--value(integer) * 4);
   --min-factor: 0.75;
   --max-factor: 1.5;
   --vw-factor: 1;
+
   font-size: clamp(
     calc(var(--base) / 16 * var(--min-factor) * 1rem),
     calc(var(--base) / 16 * var(--vw-factor) * 1vw),

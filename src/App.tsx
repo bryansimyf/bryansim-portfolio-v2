@@ -14,7 +14,7 @@ const App = () => {
           <BackgroundBeams />
         </div> */}
         <ShootingStars />
-        <StarsBackground />
+        <StarsBackground className="pointer-events-none" />
         {/* <div className="relative w-full h-screen overflow-hidden">
           <Dither
             className="!absolute inset-0 w-full h-full"
