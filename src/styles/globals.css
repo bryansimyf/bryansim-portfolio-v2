@@ -136,6 +136,17 @@
 
 /* text-responsive-2 */
 @utility text-responsive-* {
+  --base-size: calc(--value(number) * 0.25rem);
+  --min-size: calc(var(--base-size) * 0.75);
+  --max-size: calc(var(--base-size) * 1.25);
+
+  font-size: clamp(
+    var(--min-size),
+    calc(var(--base-size) + 0.5vw),
+    var(--max-size)
+  );
+}
+/* @utility text-responsive-* {
   --base: calc(--value(integer) * 4);
   --min-factor: 0.75;
   --max-factor: 1.5;
@@ -146,7 +157,7 @@
     calc(var(--base) / 16 * var(--vw-factor) * 1vw),
     calc(var(--base) / 16 * var(--max-factor) * 1rem)
   );
-}
+} */
 
 @utility scroll-mt-nav {
   scroll-margin-top: 60px;

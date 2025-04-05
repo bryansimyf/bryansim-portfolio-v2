@@ -8,7 +8,7 @@ const Experience = () => {
   return (
     <section id="experience" className="scroll-mt-nav">
       <div id="experience-wrapper" className="flex flex-col gap-4 p-2">
-        <p className="font-semibold text-lg">Experience</p>
+        <p className="font-semibold text-responsive-4.5">Experience</p>
 
         <div id="experience-timeline">
           {experiences.map((experience, index) => {
@@ -43,11 +43,13 @@ const Experience = () => {
                   id="experience-timeline-item-content"
                   className="flex flex-col gap-2 pt-1 px-2 pb-8 w-full"
                 >
-                  <span className="text-sm ">{experience.startDate}</span>
-                  <p className="text-sm font-semibold">
+                  <span className="text-responsive-3">
+                    {experience.startDate}
+                  </span>
+                  <p className="text-responsive-3.25 font-semibold">
                     {experience.title} - {experience.company}
                   </p>
-                  <p className="text-gray-300 break-words">
+                  <p className="text-responsive-3 text-gray-300 break-words mb-2">
                     {experience.description}
                   </p>
 

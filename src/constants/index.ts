@@ -42,8 +42,7 @@ export const PERSONAL_DETAILS = {
   name: "Bryan Sim",
   position: "Software Engineer",
   location: "Kuala Lumpur & Petaling Jaya, Malaysia",
-  greetMessage:
-    "Hi, I'm a software engineer passionate about building great digital experiences.",
+  greetMessage: "Hi, I'm Bryan Sim!",
   slogan: "Engineering the frontend, enhancing the experience.",
   description:
     "I'm a software engineer with 4 years of experience, specializing in frontend development. I build scalable and high-performance web applications with modern technologies. 🚀",

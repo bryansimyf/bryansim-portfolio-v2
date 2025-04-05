@@ -35,7 +35,7 @@ const App = () => {
           </div>
         </div> */}
         <NavBar />
-        <div className="relative z-1 flex flex-col gap-5 mx-auto w-full max-w-2xl pt-20 px-4">
+        <div className="relative z-1 flex flex-col gap-6 mx-auto w-full max-w-2xl pt-20 px-4">
           <Profile />
           <Experience />
           <Projects />
