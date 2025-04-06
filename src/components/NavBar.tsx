@@ -31,7 +31,10 @@ const NavBar = () => {
         <div className="flex justify-between">
           {/* Logo/Brand */}
           <div className="flex-shrink-0 flex items-center">
-            <a href="#" className="text-xl font-bold">
+            <a
+              href="#"
+              className="text-responsive-4.5 font-bold font-audiowide"
+            >
               <span className="hidden md:inline">{PERSONAL_DETAILS.name}</span>
               <span className="md:hidden">
                 {getInitials(PERSONAL_DETAILS.name)}
@@ -45,7 +48,7 @@ const NavBar = () => {
               <a
                 key={item.name}
                 href={item.href}
-                className="px-3 py-2 text-sm font-medium"
+                className="px-3 py-2 text-responsive-3 font-medium"
               >
                 {item.name}
               </a>
