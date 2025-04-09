@@ -3,6 +3,12 @@ import { Briefcase, FolderOpen, User } from "lucide-react";
 import GithubIcon from "@assets/icons/brand-github.svg?react";
 import LinkedinIcon from "@assets/icons/brand-linkedin.svg?react";
 
+// App
+export const APP_INFO = {
+  version: "v0.0",
+  lastUpdated: "2025-04-09",
+};
+
 // Layout
 export const NAV_ITEMS = [
   { name: "About", href: "#profile", icon: User },

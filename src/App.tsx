@@ -4,7 +4,8 @@ import { AnimatePresence, motion } from "motion/react";
 import { useLoading } from "@providers/LoadingProviders";
 
 import FullScreenLoader from "@components/common/FullScreenLoader";
-import Header from "@components/Header";
+import Footer from "@components/layouts/Footer";
+import Header from "@components/layouts/Header";
 import Experience from "@components/sections/Experience";
 import Profile from "@components/sections/Profile";
 import Projects from "@components/sections/Projects";
@@ -58,6 +59,7 @@ const App = () => {
           <Experience />
           <Projects />
         </div>
+        <Footer />
       </div>
     </>
   );

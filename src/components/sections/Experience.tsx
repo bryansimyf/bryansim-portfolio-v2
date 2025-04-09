@@ -74,12 +74,6 @@ const Experience = () => {
                       <Badge key={techStackItem} variant="secondary">
                         {techStackItem}
                       </Badge>
-                      // <div
-                      //   key={techStackItem}
-                      //   className="px-2 py-0.5 rounded-full border border-white/20 min-w-14 text-center"
-                      // >
-                      //   <span className="text-xs">{techStackItem}</span>
-                      // </div>
                     ))}
                   </div>
                 </div>

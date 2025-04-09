@@ -4,14 +4,14 @@ import { NAV_ITEMS, PERSONAL_DETAILS } from "@constants/index";
 
 import { getInitials } from "@utils/index";
 
-import { Button } from "./ui/Button";
+import { Button } from "../ui/Button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuGroup,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "./ui/DropdownMenu";
+} from "../ui/DropdownMenu";
 
 const Header = () => {
   const handleScrollToSection = (sectionId: string) => {
