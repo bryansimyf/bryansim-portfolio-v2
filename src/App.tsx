@@ -4,7 +4,7 @@ import { AnimatePresence, motion } from "motion/react";
 import { useLoading } from "@providers/LoadingProviders";
 
 import FullScreenLoader from "@components/common/FullScreenLoader";
-import NavBar from "@components/NavBar";
+import Header from "@components/Header";
 import Experience from "@components/sections/Experience";
 import Profile from "@components/sections/Profile";
 import Projects from "@components/sections/Projects";
@@ -13,6 +13,12 @@ import { StarsBackground } from "@components/ui/StarsBackground";
 
 const App = () => {
   const { isLoading } = useLoading();
+
+  // Auto scroll back to main
+  useEffect(() => {
+    window.history.scrollRestoration = "manual";
+    window.scrollTo(0, 0);
+  }, []);
 
   // Disable scroll while loading
   useEffect(() => {
@@ -46,7 +52,7 @@ const App = () => {
 
         <ShootingStars />
         <StarsBackground className="pointer-events-none" />
-        <NavBar />
+        <Header />
         <div className="relative z-1 flex flex-col gap-6 mx-auto w-full max-w-2xl pt-20 px-4">
           <Profile />
           <Experience />

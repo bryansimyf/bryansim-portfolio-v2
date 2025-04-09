@@ -13,7 +13,7 @@ import {
   DropdownMenuTrigger,
 } from "./ui/DropdownMenu";
 
-const NavBar = () => {
+const Header = () => {
   const handleScrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId.slice(1));
 
@@ -89,4 +89,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default Header;
