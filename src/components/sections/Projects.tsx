@@ -1,4 +1,3 @@
-import { BentoGrid } from "@components/ui/BentoGrid";
 import { Card } from "@components/ui/Card";
 
 const Projects = () => {
