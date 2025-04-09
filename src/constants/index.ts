@@ -99,19 +99,20 @@ export const PERSONAL_DETAILS = {
 
 export const PROJECTS_DETAILS = [{ name: "", repoUrl: "", techStack: [] }];
 
+// https://motion.dev/docs/react-transitions
 // Transitions
 export const TRANSITIONS = {
   fadeUp: {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
+    initial: { opacity: 0, y: 20 },
+    animate: {
       opacity: 1,
       y: 0,
-      transition: {
-        type: "spring",
-        stiffness: 100,
-        damping: 12,
-        mass: 0.8,
-      },
+    },
+    transition: {
+      type: "spring",
+      stiffness: 60, // default 1 resistance to movement
+      damping: 12, // default 10 bounce factor
+      mass: 0.5, // default 1
     },
   },
 };

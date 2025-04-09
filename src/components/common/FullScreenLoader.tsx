@@ -80,8 +80,8 @@ const FullScreenLoader = () => {
           );
         })}
       </motion.div>
+
       {/* </AnimatePresence> */}
-      {/* <Progress value={progress} className="w-[60%] md:w-[40%]" /> */}
     </div>
   );
 };

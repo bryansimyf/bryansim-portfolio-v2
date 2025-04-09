@@ -3,6 +3,8 @@ import { motion } from "motion/react";
 
 import { PERSONAL_DETAILS, TRANSITIONS } from "@constants/index";
 
+import { useLoading } from "@providers/LoadingProviders";
+
 import { Separator } from "@components/ui/Separator";
 
 import ProfilePic from "@assets/images/profile-pic.jpeg";
@@ -11,6 +13,8 @@ import BottomFadeOverlay from "../common/BottomFadeOverlay";
 import Dither from "../ui/Dither";
 
 const Profile = () => {
+  const { isLoading } = useLoading();
+
   return (
     <section id="profile" className="scroll-mt-nav">
       <div id="profile-wrapper" className="relative">
@@ -33,9 +37,9 @@ const Profile = () => {
         </div>
 
         <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={TRANSITIONS.fadeUp}
+          initial={TRANSITIONS.fadeUp.initial}
+          animate={isLoading ? "" : TRANSITIONS.fadeUp.animate}
+          transition={TRANSITIONS.fadeUp.transition}
         >
           <div
             id="profile-content-wrapper"
@@ -56,11 +60,14 @@ const Profile = () => {
               <span className="text-sm">{PERSONAL_DETAILS.greetMessage}</span>
             </div> */}
 
-                <div className="flex items-center gap-1">
+                <div className="flex flex-col xs-max:flex-row items-center gap-1">
                   <span className="font-extrabold text-responsive-8">
                     {PERSONAL_DETAILS.name}
                   </span>
-                  <Separator orientation="vertical" className="h-8 bg-white " />
+                  <Separator
+                    orientation="vertical"
+                    className="h-8 bg-white hidden xs-max:block"
+                  />
                   <span className="font-medium text-responsive-4">
                     {PERSONAL_DETAILS.position}
                   </span>

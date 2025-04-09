@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { AnimatePresence, motion } from "motion/react";
 
 import { useLoading } from "@providers/LoadingProviders";
@@ -12,6 +13,19 @@ import { StarsBackground } from "@components/ui/StarsBackground";
 
 const App = () => {
   const { isLoading } = useLoading();
+
+  // Disable scroll while loading
+  useEffect(() => {
+    if (isLoading) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isLoading]);
 
   return (
     <>
@@ -37,7 +51,6 @@ const App = () => {
           <Profile />
           <Experience />
           <Projects />
-          <div className="h-[1280px]">Rest of the content</div>
         </div>
       </div>
     </>

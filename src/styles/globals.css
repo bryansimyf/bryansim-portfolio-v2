@@ -128,6 +128,9 @@
   --font-manrope: "Manrope", sans-serif;
   --font-inter: "Inter", sans-serif;
 
+  /* Custom view point */
+  --breakpoint-xs-max: 416px;
+
   /* Colors */
   --color-charcoal-gray: #121212;
   --color-midnight-blue: #212121;

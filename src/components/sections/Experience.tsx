@@ -1,12 +1,28 @@
+import { motion } from "motion/react";
+
 import { PERSONAL_DETAILS } from "@constants/index";
+import { TRANSITIONS } from "@constants/index";
+
+import { useLoading } from "@providers/LoadingProviders";
 
 import { Badge } from "@components/ui/Badge";
 
 const Experience = () => {
+  const { isLoading } = useLoading();
+
   const { experiences } = PERSONAL_DETAILS;
 
   return (
-    <section id="experience" className="scroll-mt-nav">
+    <motion.section
+      id="experience"
+      className="scroll-mt-nav"
+      initial={TRANSITIONS.fadeUp.initial}
+      animate={isLoading ? "" : TRANSITIONS.fadeUp.animate}
+      transition={{
+        ...TRANSITIONS.fadeUp.transition,
+        delay: 0.4,
+      }}
+    >
       <div id="experience-wrapper" className="flex flex-col gap-4 p-2">
         <p className="font-semibold text-responsive-4.5">Experience</p>
 
@@ -72,7 +88,7 @@ const Experience = () => {
           })}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
