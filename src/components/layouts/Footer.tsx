@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="max-w-2xl mx-auto px-4 my-10 flex justify-between">
       <div></div>
-      <span className="text-responsive-3 text-gray-300">
+      <span className="text-responsive-3 text-gray-300 font-medium">
         Last Update: {APP_INFO.lastUpdated}
       </span>
     </footer>

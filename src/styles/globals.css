@@ -135,6 +135,7 @@
   --color-charcoal-gray: #121212;
   --color-midnight-blue: #212121;
   --color-rich-black: #0a0a0a;
+  --color-iridium: #181818;
 }
 
 /* text-responsive-2 */
@@ -143,11 +144,22 @@
   --min-size: calc(var(--base-size) * 0.75);
   --max-size: calc(var(--base-size) * 1.25);
 
+  --min-line-height: 1.2;
+  --preferred-line-height: 1.4;
+  --max-line-height: 1.6;
+
   font-size: clamp(
     var(--min-size),
     calc(var(--base-size) + 0.5vw),
     var(--max-size)
-  );
+  ) !important;
+
+  /* line-height: calc(1em + 5px); */
+  line-height: clamp(
+    var(--min-line-height),
+    calc(var(--preferred-line-height) + 0.1vw),
+    var(--max-line-height)
+  ) !important;
 }
 
 @utility scroll-mt-nav {

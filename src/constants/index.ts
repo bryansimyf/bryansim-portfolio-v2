@@ -44,6 +44,7 @@ export const TECHSTACK_KEYS = {
   LARAVEL: "Laravel",
   EXPRESS: "Express.js",
   MYSQL: "Mysql",
+  MOTION: "Motion",
 };
 
 export const PERSONAL_DETAILS = {
@@ -103,7 +104,22 @@ export const PERSONAL_DETAILS = {
   ],
 };
 
-export const PROJECTS_DETAILS = [{ name: "", repoUrl: "", techStack: [] }];
+export const PROJECTS_DETAILS = [
+  {
+    name: "bryansim.dev",
+    repoUrl: "https://github.com/SushiMeliodas/my-portfolio-v2",
+    url: window.location.href,
+    image: "",
+    description:
+      "A personal web portfolio to showcase my projects, growth, and passion for building great user experiences.",
+    techStack: [
+      TECHSTACK_KEYS.TYPESCRIPT,
+      TECHSTACK_KEYS.TAILWIND,
+      TECHSTACK_KEYS.MOTION,
+      TECHSTACK_KEYS.VITE,
+    ],
+  },
+];
 
 // https://motion.dev/docs/react-transitions
 // Transitions
