@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { AnimatePresence, motion } from "motion/react";
+import { motion } from "motion/react";
 
 import { useLoading } from "@providers/LoadingProviders";
 
@@ -43,8 +43,6 @@ const FullScreenLoader = () => {
 
   return (
     <div className="fixed flex-col inset-0 flex justify-center items-center bg-charcoal-gray z-50 ">
-      {/* <AnimatePresence> */}
-
       <motion.div
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 60 - 2 * progress }}
@@ -80,8 +78,6 @@ const FullScreenLoader = () => {
           );
         })}
       </motion.div>
-
-      {/* </AnimatePresence> */}
     </div>
   );
 };

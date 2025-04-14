@@ -1,5 +1,4 @@
 import { ExternalLink, FolderGit2 } from "lucide-react";
-import { AnimatePresence, motion } from "motion/react";
 
 import { PROJECTS_DETAILS } from "@constants/index";
 
@@ -40,7 +39,7 @@ const PreviewCard = (props: PreviewCardProps) => {
         <div className="flex-1 flex flex-col gap-2">
           <p className="font-semibold text-responsive-3.5">{name}</p>
           <div className="flex flex-wrap gap-2">
-            {techStack.map((techStackItem, index) => (
+            {techStack.map((techStackItem) => (
               <Badge key={techStackItem}>{techStackItem}</Badge>
             ))}
           </div>

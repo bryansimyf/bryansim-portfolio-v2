@@ -1,10 +1,11 @@
-import { MapPin } from "lucide-react";
+import { Download, MapPin } from "lucide-react";
 import { motion } from "motion/react";
 
-import { PERSONAL_DETAILS, TRANSITIONS } from "@constants/index";
+import { PERSONAL_DETAILS, SOCIAL_ITEMS, TRANSITIONS } from "@constants/index";
 
 import { useLoading } from "@providers/LoadingProviders";
 
+import { Button } from "@components/ui/Button";
 import { Separator } from "@components/ui/Separator";
 
 import ProfilePic from "@assets/images/profile-pic.jpeg";
@@ -14,6 +15,22 @@ import Dither from "../ui/Dither";
 
 const Profile = () => {
   const { isLoading } = useLoading();
+
+  const handleRedirectSocial = (url: string) => {
+    if (!url) return;
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
+
+  const handleDownloadResume = () => {
+    const link = document.createElement("a");
+    link.href = "/resume/bryan_sim_resume.pdf";
+    link.download = "bryan_sim_resume.pdf";
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
 
   return (
     <section id="profile" className="scroll-mt-nav">
@@ -38,7 +55,7 @@ const Profile = () => {
 
         <motion.div
           initial={TRANSITIONS.fadeUp.initial}
-          animate={isLoading ? "" : TRANSITIONS.fadeUp.animate}
+          animate={isLoading ? {} : TRANSITIONS.fadeUp.animate}
           transition={TRANSITIONS.fadeUp.transition}
         >
           <div
@@ -64,10 +81,12 @@ const Profile = () => {
                   <span className="font-extrabold text-responsive-8">
                     {PERSONAL_DETAILS.name}
                   </span>
+
                   <Separator
                     orientation="vertical"
                     className="h-8 bg-white hidden xs-max:block"
                   />
+
                   <span className="font-medium text-responsive-4">
                     {PERSONAL_DETAILS.position}
                   </span>
@@ -80,6 +99,25 @@ const Profile = () => {
                 <div className="flex items-center gap-1 font-light text-responsive-3">
                   <MapPin className="w-4.5 h-4.5" />
                   <p>{PERSONAL_DETAILS.location}</p>
+                </div>
+
+                <div className="flex gap-2">
+                  <div className="flex gap-2">
+                    {SOCIAL_ITEMS.map((socialItem) => (
+                      <Button
+                        key={socialItem.name}
+                        size="icon"
+                        variant="outline"
+                        onClick={() => handleRedirectSocial(socialItem.url)}
+                      >
+                        <socialItem.icon />
+                      </Button>
+                    ))}
+                  </div>
+                  <Separator orientation="vertical" className="h-auto" />
+                  <Button variant="outline" onClick={handleDownloadResume}>
+                    Resume <Download />
+                  </Button>
                 </div>
               </div>
             </div>

@@ -17,7 +17,7 @@ const Experience = () => {
       id="experience"
       className="scroll-mt-nav"
       initial={TRANSITIONS.fadeUp.initial}
-      animate={isLoading ? "" : TRANSITIONS.fadeUp.animate}
+      animate={isLoading ? {} : TRANSITIONS.fadeUp.animate}
       transition={{
         ...TRANSITIONS.fadeUp.transition,
         delay: 0.4,
@@ -70,7 +70,7 @@ const Experience = () => {
                   </p>
 
                   <div className="flex flex-wrap gap-2">
-                    {experience.techStack.map((techStackItem, index) => (
+                    {experience.techStack.map((techStackItem) => (
                       <Badge key={techStackItem} variant="secondary">
                         {techStackItem}
                       </Badge>

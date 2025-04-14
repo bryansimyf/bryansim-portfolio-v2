@@ -2,6 +2,7 @@ import { Briefcase, FolderOpen, User } from "lucide-react";
 
 import GithubIcon from "@assets/icons/brand-github.svg?react";
 import LinkedinIcon from "@assets/icons/brand-linkedin.svg?react";
+import BryansimDevScreenShot from "@assets/images/projects/bryansim-dev.png";
 
 // App
 export const APP_INFO = {
@@ -109,7 +110,7 @@ export const PROJECTS_DETAILS = [
     name: "bryansim.dev",
     repoUrl: "https://github.com/SushiMeliodas/my-portfolio-v2",
     url: window.location.href,
-    image: "",
+    image: BryansimDevScreenShot,
     description:
       "A personal web portfolio to showcase my projects, growth, and passion for building great user experiences.",
     techStack: [
