@@ -43,7 +43,7 @@ const App = () => {
               key="loader"
               initial={{ opacity: 1 }}
               animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }} // Removed scale to avoid layout issues
+              exit={{ opacity: 0, scale: 0 }} // Removed scale to avoid layout issues
               transition={{ duration: 0.2, ease: "easeInOut" }}
             >
               <FullScreenLoader />

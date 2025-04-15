@@ -72,7 +72,7 @@ const Profile = () => {
                 className="w-23 h-23 rounded-3xl object-cover"
               />
 
-              <div className="flex flex-col gap-1 self-center p-2 w-full items-center md:items-start">
+              <div className="flex flex-col gap-2 self-center p-2 w-full items-center md:items-start">
                 {/* <div className="px-4 py-2 rounded-2xl bg-midnight-blue">
               <span className="text-sm">{PERSONAL_DETAILS.greetMessage}</span>
             </div> */}
@@ -87,7 +87,7 @@ const Profile = () => {
                     className="h-8 bg-white hidden xs-max:block"
                   />
 
-                  <span className="font-medium text-responsive-4">
+                  <span className="font-medium text-responsive-5 font-vt323">
                     {PERSONAL_DETAILS.position}
                   </span>
                 </div>
@@ -101,7 +101,7 @@ const Profile = () => {
                   <p>{PERSONAL_DETAILS.location}</p>
                 </div>
 
-                <div className="flex gap-2">
+                <div className="flex gap-2 justify-center md:justify-end w-full">
                   <div className="flex gap-2">
                     {SOCIAL_ITEMS.map((socialItem) => (
                       <Button

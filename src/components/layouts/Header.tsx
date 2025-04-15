@@ -33,7 +33,7 @@ const Header = () => {
           <div className="flex-shrink-0 flex items-center">
             <a
               href="#"
-              className="text-responsive-4.5 font-bold font-audiowide"
+              className="text-responsive-4.5 font-bold font-press-start-2p"
             >
               <span className="hidden md:inline">{PERSONAL_DETAILS.name}</span>
               <span className="md:hidden">

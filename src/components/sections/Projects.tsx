@@ -46,10 +46,10 @@ const PreviewCard = (props: PreviewCardProps) => {
           <p className="text-responsive-3 text-gray-400">{description}</p>
           <div className="flex justify-end gap-2">
             <Button variant="outline" onClick={() => handleRedirect("github")}>
-              <FolderGit2 /> Source
+              Source <FolderGit2 />
             </Button>
-            <Button variant="outline" onClick={() => handleRedirect("project")}>
-              <ExternalLink /> Link
+            <Button variant="ghost" onClick={() => handleRedirect("project")}>
+              Link <ExternalLink />
             </Button>
           </div>
         </div>

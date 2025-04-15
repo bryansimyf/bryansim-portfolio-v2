@@ -20,8 +20,46 @@ const FullScreenLoader = () => {
   if (progress === 100) {
     setTimeout(() => {
       setLoading(false);
-    }, 500);
+    }, 800);
   }
+
+  const containerVariants = {
+    hidden: {
+      opacity: 0,
+      y: 100,
+    },
+    visible: {
+      opacity: 1,
+      y: 60 - 2 * progress,
+      transition: {
+        type: "tween",
+        ease: "easeOut",
+        duration: 0.4,
+        // This tells children to stagger their animations
+        staggerChildren: 0.1, // Time delay between each child animation
+        delayChildren: 0.2, // Initial delay before first child animates
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: {
+      opacity: 0,
+      y: 20,
+    },
+    visible: (custom: number) => ({
+      opacity: custom < progress ? 0 : 1,
+      x: custom < progress ? -40 : 0,
+      y: 0,
+      scale: custom === progress ? 2 : 1,
+      transition: {
+        type: "spring",
+        stiffness: 100,
+        damping: 12,
+        mass: 0.8,
+      },
+    }),
+  };
 
   useEffect(() => {
     const updateProgress = () => {
@@ -42,38 +80,24 @@ const FullScreenLoader = () => {
   }, []);
 
   return (
-    <div className="fixed flex-col inset-0 flex justify-center items-center bg-charcoal-gray z-50 ">
+    <div className="fixed flex-col inset-0 flex justify-center bg-charcoal-gray z-50 ">
       <motion.div
-        initial={{ opacity: 0, y: 100 }}
-        animate={{ opacity: 1, y: 60 - 2 * progress }}
-        transition={{
-          type: "tween",
-          ease: "easeOut",
-          duration: 0.4,
-        }}
-        className="flex flex-col gap-4"
+        className="flex flex-col gap-4 ml-[30%]"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
       >
         {Object.entries(loadingText).map(([key, text]) => {
-          const isActive = progress === Number(key);
+          const keyNumber = Number(key);
 
           return (
             <motion.div
               key={key}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{
-                opacity: 1,
-                y: 0,
-                scale: isActive ? 2 : 1,
-              }}
-              transition={{
-                type: "spring",
-                stiffness: 100,
-                damping: 12,
-                mass: 0.8,
-              }}
-              className="origin-left"
+              custom={keyNumber} // Pass custom prop to use in variants
+              variants={itemVariants}
+              className="origin-left flex items-center gap-2"
             >
-              {text}
+              <span>{text}</span>
             </motion.div>
           );
         })}
