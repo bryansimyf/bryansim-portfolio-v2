@@ -36,8 +36,8 @@ const FullScreenLoader = () => {
         ease: "easeOut",
         duration: 0.4,
         // This tells children to stagger their animations
-        staggerChildren: 0.1, // Time delay between each child animation
-        delayChildren: 0.2, // Initial delay before first child animates
+        // staggerChildren: 0.1, // Time delay between each child animation
+        // delayChildren: 0.2, // Initial delay before first child animates
       },
     },
   };

@@ -4,6 +4,8 @@ import GithubIcon from "@assets/icons/brand-github.svg?react";
 import LinkedinIcon from "@assets/icons/brand-linkedin.svg?react";
 import BryansimDevScreenShot from "@assets/images/projects/bryansim-dev.png";
 
+const currentUrl = window.location.href;
+
 // App
 export const APP_INFO = {
   version: "v0.0",
@@ -56,6 +58,15 @@ export const PERSONAL_DETAILS = {
   slogan: "Engineering the frontend, enhancing the experience.",
   description:
     "I'm a software engineer with 4 years of experience, specializing in frontend development. I build scalable and high-performance web applications with modern technologies. 🚀",
+  currentStack: [
+    TECHSTACK_KEYS.JAVASCRIPT,
+    TECHSTACK_KEYS.TYPESCRIPT,
+    TECHSTACK_KEYS.TAILWIND,
+    TECHSTACK_KEYS.REACT,
+    TECHSTACK_KEYS.MUI,
+    TECHSTACK_KEYS.REDUX,
+    TECHSTACK_KEYS.MOTION,
+  ],
   experiences: [
     {
       startDate: "2023",
@@ -109,7 +120,7 @@ export const PROJECTS_DETAILS = [
   {
     name: "bryansim.dev",
     repoUrl: "https://github.com/SushiMeliodas/my-portfolio-v2",
-    url: window.location.href,
+    url: currentUrl,
     image: BryansimDevScreenShot,
     description:
       "A personal web portfolio to showcase my projects, growth, and passion for building great user experiences.",

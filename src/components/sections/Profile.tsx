@@ -1,4 +1,5 @@
-import { Download, MapPin } from "lucide-react";
+import { useEffect, useState } from "react";
+import { Award, Download, MapPin } from "lucide-react";
 import { motion } from "motion/react";
 
 import { PERSONAL_DETAILS, SOCIAL_ITEMS, TRANSITIONS } from "@constants/index";
@@ -16,6 +17,8 @@ import Dither from "../ui/Dither";
 const Profile = () => {
   const { isLoading } = useLoading();
 
+  const [showBanner, setShowBanner] = useState(false);
+
   const handleRedirectSocial = (url: string) => {
     if (!url) return;
     window.open(url, "_blank", "noopener,noreferrer");
@@ -32,26 +35,34 @@ const Profile = () => {
     document.body.removeChild(link);
   };
 
+  // Delay the banner for smoother loading ui
+  useEffect(() => {
+    const timer = setTimeout(() => setShowBanner(true), 1300);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <section id="profile" className="scroll-mt-nav">
       <div id="profile-wrapper" className="relative">
-        <div
-          id="profile-banner-wrapper"
-          className="relative h-30 md:h-44 overflow-hidden"
-        >
-          <Dither
-            // className="h-48"
-            waveColor={[0.5, 0.5, 0.5]}
-            disableAnimation={false}
-            enableMouseInteraction={true}
-            mouseRadius={0.3}
-            colorNum={4}
-            waveAmplitude={0.3}
-            waveFrequency={3}
-            waveSpeed={0.05}
-          />
-          <BottomFadeOverlay />
-        </div>
+        {showBanner && (
+          <div
+            id="profile-banner-wrapper"
+            className="relative h-30 md:h-44 overflow-hidden"
+          >
+            <Dither
+              // className="h-48"
+              waveColor={[0.5, 0.5, 0.5]}
+              disableAnimation={false}
+              enableMouseInteraction={true}
+              mouseRadius={0.3}
+              colorNum={4}
+              waveAmplitude={0.3}
+              waveFrequency={3}
+              waveSpeed={0.05}
+            />
+            <BottomFadeOverlay />
+          </div>
+        )}
 
         <motion.div
           initial={TRANSITIONS.fadeUp.initial}
@@ -121,12 +132,30 @@ const Profile = () => {
                 </div>
               </div>
             </div>
+
             <div
               id="profile-content-desc"
               className="font-light text-gray-300 text-responsive-3.5"
             >
               {PERSONAL_DETAILS.description}
             </div>
+
+            {/* <div
+              id="profile-content-recent-techs"
+              className="relative  p-4 border rounded-lg"
+            >
+              <span className="absolute top-[-13px] left-1 z-10">
+                Technologies I've recently worked with:
+              </span>
+              <div className="grid grid-rows-3 grid-flow-col auto-cols-[150px] gap-2 font-share-tech-mono">
+                {PERSONAL_DETAILS.currentStack.map((stack, index) => (
+                  <div key={index} className="flex gap-2">
+                    <Award className="text-cyan-500" />
+                    <span>{stack}</span>
+                  </div>
+                ))}
+              </div>
+            </div> */}
           </div>
         </motion.div>
       </div>

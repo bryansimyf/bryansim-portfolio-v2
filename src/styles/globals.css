@@ -2,10 +2,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=VT323:wght@300;400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono:wght@300;400;500;600;700&display=swap");
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains:wght@300;400;500;600;700&display=swap");
 
 @import "tailwindcss";
 @import "tw-animate-css";
@@ -126,11 +126,12 @@
   /* Font Families */
   --font-audiowide: "Audiowide", sans-serif;
   --font-orbitron: "Orbitron", sans-serif;
+  --font-vt323: "VT323", monospace;
+  --font-press-start-2p: "Press Start 2P", cursive;
+
   --font-poppins: "Poppins", sans-serif;
-  --font-manrope: "Manrope", sans-serif;
-  --font-inter: "Inter", sans-serif;
-  --font-vt323: "VT323", sans-serif;
-  --font-press-start-2p: "Press Start 2P", sans-serif;
+  --font-jet-brains: "JetBrains", monospace;
+  --font-share-tech-mono: "Share Tech Mono", monospace;
 
   /* Custom view point */
   --breakpoint-xs-max: 416px;
