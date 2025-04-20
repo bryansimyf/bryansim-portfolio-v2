@@ -6,7 +6,7 @@ import { PERSONAL_DETAILS, SOCIAL_ITEMS, TRANSITIONS } from "@constants/index";
 
 import { useLoading } from "@providers/LoadingProviders";
 
-import { Button } from "@components/ui/Button";
+import HoverButton from "@components/common/HoverButton";
 import { Separator } from "@components/ui/Separator";
 
 import ProfilePic from "@assets/images/profile-pic.jpeg";
@@ -107,7 +107,7 @@ const Profile = () => {
                 Open to New Opportunities
               </span> */}
 
-                <div className="flex items-center gap-1 font-light text-responsive-3">
+                <div className="flex items-center gap-1 font-light text-responsive-3 md:mb-4">
                   <MapPin className="w-4.5 h-4.5" />
                   <p>{PERSONAL_DETAILS.location}</p>
                 </div>
@@ -115,20 +115,20 @@ const Profile = () => {
                 <div className="flex gap-2 justify-center md:justify-end w-full">
                   <div className="flex gap-2">
                     {SOCIAL_ITEMS.map((socialItem) => (
-                      <Button
+                      <HoverButton
                         key={socialItem.name}
                         size="icon"
                         variant="outline"
                         onClick={() => handleRedirectSocial(socialItem.url)}
                       >
                         <socialItem.icon />
-                      </Button>
+                      </HoverButton>
                     ))}
                   </div>
                   <Separator orientation="vertical" className="h-auto" />
-                  <Button variant="outline" onClick={handleDownloadResume}>
+                  <HoverButton onClick={handleDownloadResume}>
                     Resume <Download />
-                  </Button>
+                  </HoverButton>
                 </div>
               </div>
             </div>
@@ -156,6 +156,16 @@ const Profile = () => {
                 ))}
               </div>
             </div> */}
+            <div className="font-vt323 text-responsive-4 px-4 py-2 border rounded-lg backdrop-blur-md bg-midnight-blue/30">
+              Technologies I've recently worked with:
+              <ul className="grid grid-rows-3 grid-flow-col auto-cols-auto gap-2">
+                {PERSONAL_DETAILS.currentStack.map((stack, index) => (
+                  <li key={index} className="flex gap-2">
+                    {stack}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </motion.div>
       </div>

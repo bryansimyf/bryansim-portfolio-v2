@@ -2,6 +2,7 @@ import { ExternalLink, FolderGit2 } from "lucide-react";
 
 import { PROJECTS_DETAILS } from "@constants/index";
 
+import HoverButton from "@components/common/HoverButton";
 import { Badge } from "@components/ui/Badge";
 import { Button } from "@components/ui/Button";
 import { Card } from "@components/ui/Card";
@@ -45,12 +46,15 @@ const PreviewCard = (props: PreviewCardProps) => {
           </div>
           <p className="text-responsive-3 text-gray-400">{description}</p>
           <div className="flex justify-end gap-2">
-            <Button variant="outline" onClick={() => handleRedirect("github")}>
+            <HoverButton onClick={() => handleRedirect("github")}>
               Source <FolderGit2 />
-            </Button>
-            <Button variant="ghost" onClick={() => handleRedirect("project")}>
+            </HoverButton>
+            <HoverButton
+              // variant="ghost"
+              onClick={() => handleRedirect("project")}
+            >
               Link <ExternalLink />
-            </Button>
+            </HoverButton>
           </div>
         </div>
       </div>
