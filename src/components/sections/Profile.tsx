@@ -1,10 +1,7 @@
-import { useEffect, useState } from "react";
-import { Award, Download, MapPin } from "lucide-react";
+import { Download, MapPin } from "lucide-react";
 import { motion } from "motion/react";
 
 import { PERSONAL_DETAILS, SOCIAL_ITEMS, TRANSITIONS } from "@constants/index";
-
-import { useLoading } from "@providers/LoadingProviders";
 
 import HoverButton from "@components/common/HoverButton";
 import { Separator } from "@components/ui/Separator";
@@ -15,10 +12,6 @@ import BottomFadeOverlay from "../common/BottomFadeOverlay";
 import Dither from "../ui/Dither";
 
 const Profile = () => {
-  const { isLoading } = useLoading();
-
-  const [showBanner, setShowBanner] = useState(false);
-
   const handleRedirectSocial = (url: string) => {
     if (!url) return;
     window.open(url, "_blank", "noopener,noreferrer");
@@ -35,39 +28,41 @@ const Profile = () => {
     document.body.removeChild(link);
   };
 
-  // Delay the banner for smoother loading ui
-  useEffect(() => {
-    const timer = setTimeout(() => setShowBanner(true), 1300);
-    return () => clearTimeout(timer);
-  }, []);
-
   return (
     <section id="profile" className="scroll-mt-nav">
       <div id="profile-wrapper" className="relative">
-        {showBanner && (
-          <div
-            id="profile-banner-wrapper"
-            className="relative h-30 md:h-44 overflow-hidden"
-          >
-            <Dither
-              // className="h-48"
-              waveColor={[0.5, 0.5, 0.5]}
-              disableAnimation={false}
-              enableMouseInteraction={true}
-              mouseRadius={0.3}
-              colorNum={4}
-              waveAmplitude={0.3}
-              waveFrequency={3}
-              waveSpeed={0.05}
-            />
-            <BottomFadeOverlay />
-          </div>
-        )}
+        <motion.div
+          layout
+          id="profile-banner-wrapper"
+          className="relative h-30 md:h-44 overflow-hidden"
+          initial={{ ...TRANSITIONS.fadeUp.initial, filter: "blur(10px)" }}
+          animate={{ ...TRANSITIONS.fadeUp.animate, filter: "blur(0px)" }}
+          transition={{
+            type: "tween",
+            duration: 1.2,
+            ease: "easeInOut",
+          }}
+        >
+          <Dither
+            // className="h-48"
+            waveColor={[0.5, 0.5, 0.5]}
+            disableAnimation={false}
+            enableMouseInteraction={true}
+            mouseRadius={0.3}
+            colorNum={4}
+            waveAmplitude={0.3}
+            waveFrequency={3}
+            waveSpeed={0.05}
+          />
+
+          <BottomFadeOverlay />
+        </motion.div>
 
         <motion.div
           initial={TRANSITIONS.fadeUp.initial}
-          animate={isLoading ? {} : TRANSITIONS.fadeUp.animate}
-          transition={TRANSITIONS.fadeUp.transition}
+          // animate={isLoading ? {} : TRANSITIONS.fadeUp.animate}
+          animate={TRANSITIONS.fadeUp.animate}
+          transition={{ ...TRANSITIONS.fadeUp.transition, delay: 0.4 }}
         >
           <div
             id="profile-content-wrapper"
@@ -135,7 +130,7 @@ const Profile = () => {
 
             <div
               id="profile-content-desc"
-              className="font-light text-gray-300 text-responsive-3.5"
+              className="font-light text-gray-300 text-responsive-3.5 text-center md:text-left"
             >
               {PERSONAL_DETAILS.description}
             </div>

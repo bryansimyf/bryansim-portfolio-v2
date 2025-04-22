@@ -36,7 +36,7 @@ const HoverButton = (props: HoverButton) => {
       >
         <Button
           variant="outline"
-          className={`relative ${buttonClassName}`}
+          className={`relative font-vt323 text-responsive-4 ${buttonClassName}`}
           {...rest}
         >
           {children}

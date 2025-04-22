@@ -143,9 +143,10 @@ export const TRANSITIONS = {
       y: 0,
     },
     transition: {
+      // duration: 0.4,
       type: "spring",
-      stiffness: 60, // default 1 resistance to movement
-      damping: 12, // default 10 bounce factor
+      stiffness: 100, // default 1 resistance to movement
+      damping: 20, // default 10 bounce factor
       mass: 0.5, // default 1
     },
   },
