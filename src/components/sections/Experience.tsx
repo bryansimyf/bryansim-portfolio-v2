@@ -5,6 +5,16 @@ import { TRANSITIONS } from "@constants/index";
 
 import { Badge } from "@components/ui/Badge";
 
+const CompanyTag = (props: { name: string; url: string }) => {
+  const { name, url } = props;
+
+  return (
+    <a href={url} className="font-bold text-gray-200">
+      {name}
+    </a>
+  );
+};
+
 const Experience = () => {
   const { experiences } = PERSONAL_DETAILS;
 
@@ -16,7 +26,7 @@ const Experience = () => {
       animate={TRANSITIONS.fadeUp.animate}
       transition={{
         ...TRANSITIONS.fadeUp.transition,
-        delay: 0.5,
+        delay: 0.6,
       }}
     >
       <div id="experience-wrapper" className="flex flex-col gap-4 p-2">
@@ -61,9 +71,21 @@ const Experience = () => {
                   <p className="text-responsive-3.25 font-semibold">
                     {experience.title} - {experience.company}
                   </p>
-                  <p className="text-responsive-3 text-gray-300 break-words mb-2">
-                    {experience.description}
-                  </p>
+                  <div className="text-responsive-3 text-gray-300 break-words mb-2">
+                    {experience.description.map((desc, index) => {
+                      if (typeof desc === "object") {
+                        return (
+                          <CompanyTag
+                            key={index}
+                            name={desc.name}
+                            url={desc.url}
+                          />
+                        );
+                      }
+
+                      return <span key={index}>{desc}</span>;
+                    })}
+                  </div>
 
                   <div className="flex flex-wrap gap-2">
                     {experience.techStack.map((techStackItem) => (

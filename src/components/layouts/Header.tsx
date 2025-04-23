@@ -1,6 +1,7 @@
 import { Menu } from "lucide-react";
+import { motion } from "motion/react";
 
-import { NAV_ITEMS, PERSONAL_DETAILS } from "@constants/index";
+import { NAV_ITEMS, PERSONAL_DETAILS, TRANSITIONS } from "@constants/index";
 
 import { getInitials } from "@utils/index";
 
@@ -14,6 +15,21 @@ import {
 } from "../ui/DropdownMenu";
 
 const Header = () => {
+  const navbar = {
+    hidden: {
+      filter: "blur(10px)",
+      // y: -60,
+    },
+    show: {
+      filter: "blur(0px)",
+      // y: 0,
+      transition: {
+        ...TRANSITIONS.fadeUp.transition,
+        delay: 1,
+      },
+    },
+  };
+
   const handleScrollToSection = (sectionId: string) => {
     const section = document.getElementById(sectionId.slice(1));
 
@@ -26,7 +42,12 @@ const Header = () => {
   };
 
   return (
-    <nav className="backdrop-blur-md fixed w-full z-10">
+    <motion.nav
+      className="backdrop-blur-md fixed w-full z-10"
+      variants={navbar}
+      initial="hidden"
+      animate="show"
+    >
       <div className="max-w-2xl mx-auto px-4 py-2 md:p-2">
         <div className="flex justify-between">
           {/* Logo/Brand */}
@@ -44,13 +65,13 @@ const Header = () => {
 
           {/* Desktop Navigation - hidden on mobile, shown on md screens and up */}
           <div className="hidden md:flex items-center space-x-4">
-            {NAV_ITEMS.map((item) => (
+            {NAV_ITEMS.map((navItem) => (
               <a
-                key={item.name}
-                href={item.href}
+                key={navItem.name}
+                href={navItem.href}
                 className="px-3 py-2 text-responsive-3 font-medium"
               >
-                {item.name}
+                {navItem.name}
               </a>
             ))}
           </div>
@@ -85,7 +106,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-    </nav>
+    </motion.nav>
   );
 };
 

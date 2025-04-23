@@ -74,8 +74,21 @@ export const PERSONAL_DETAILS = {
       logo: "",
       company: "Boost Credit",
       title: "Software Engineer",
-      description:
-        "Developed Boost PayFlex, enabling seamless payment flexibility for millions of merchants, while enhancing SME lending applications, internal management tools, and scalable admin panel templates. Focused on improving user experience, streamlining workflows, and optimizing application performance.",
+      // description:
+      //   "Developed Boost PayFlex, enabling seamless payment flexibility for millions of merchants, while enhancing SME lending applications, internal management tools, and scalable admin panel templates. Focused on improving user experience, streamlining workflows, and optimizing application performance.",
+      description: [
+        "Developed ",
+        {
+          name: "Boost PayFlex",
+          url: "https://myboost.co/feature/boost-payflex",
+        },
+        " enabling seamless payment flexibility for millions of merchants, while enhancing ",
+        {
+          name: "SME lending applications",
+          url: "https://myboost.co/credit/capital-by-boost-credit",
+        },
+        " internal management tools, and scalable admin panel templates. Focused on improving user experience, streamlining workflows, and optimizing application performance.",
+      ],
       techStack: [
         TECHSTACK_KEYS.JAVASCRIPT,
         TECHSTACK_KEYS.TYPESCRIPT,
@@ -93,8 +106,21 @@ export const PERSONAL_DETAILS = {
       logo: "",
       company: "Komaci Network",
       title: "Software Engineer",
-      description:
-        "Developed and improved Komaci (micro-influencing) and EZlife (social commerce, 250+ sellers, 210K+ transactions). Led UI/UX collaboration, built reusable components, designed APIs and database structures, and ensured seamless feature integrations. Worked on API consumption, dynamic state updates, and backend enhancements.",
+      // description:
+      //   "Developed and improved Komaci (micro-influencing) and EZlife (social commerce, 250+ sellers, 210K+ transactions). Led UI/UX collaboration, built reusable components, designed APIs and database structures, and ensured seamless feature integrations. Worked on API consumption, dynamic state updates, and backend enhancements.",
+      description: [
+        "Developed and improved ",
+        {
+          name: "Komaci (micro-influencing)",
+          url: "https://komacinetwork.com/my/brand",
+        },
+        " and ",
+        {
+          name: "EZlife (social commerce, 250+ sellers, 210K+ transactions). ",
+          url: "https://ezlive.biz/my-en",
+        },
+        "Led UI/UX collaboration, built reusable components, designed APIs and database structures, and ensured seamless feature integrations. Worked on API consumption, dynamic state updates, and backend enhancements.",
+      ],
       techStack: [
         TECHSTACK_KEYS.PHP,
         TECHSTACK_KEYS.JAVASCRIPT,
@@ -110,7 +136,7 @@ export const PERSONAL_DETAILS = {
       logo: "",
       company: "Eboss Group Holdings",
       title: "Intern, Software Developer",
-      description: "Minor enhancements & bugs fixing backend logic.",
+      description: ["Minor enhancements & bugs fixing backend logic."],
       techStack: [],
     },
   ],
