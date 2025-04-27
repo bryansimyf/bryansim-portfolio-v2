@@ -31,6 +31,7 @@ const HoverButton = (props: HoverButton) => {
     <div className={`relative inline-block ${className}`}>
       <div className={`absolute inset-0 bg-gray-300 rounded-lg`} />
       <motion.div
+        whileTap={{ x: 0, y: 0 }}
         whileHover={{ x: -2.5, y: -2.5 }}
         transition={{ type: "spring", stiffness: 300, damping: 20, mass: 0.5 }}
       >
