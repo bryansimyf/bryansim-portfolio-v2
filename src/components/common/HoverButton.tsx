@@ -28,7 +28,7 @@ const HoverButton = (props: HoverButton) => {
   } = props;
 
   return (
-    <div className={`relative inline-block group ${className}`}>
+    <div className={`relative inline-block ${className}`}>
       <div className={`absolute inset-0 bg-gray-300 rounded-lg`} />
       <motion.div
         whileHover={{ x: -2.5, y: -2.5 }}

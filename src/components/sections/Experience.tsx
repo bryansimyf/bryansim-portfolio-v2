@@ -3,20 +3,15 @@ import { motion } from "motion/react";
 import { PERSONAL_DETAILS } from "@constants/index";
 import { TRANSITIONS } from "@constants/index";
 
+import HoverCoverText from "@components/common/HoverCoverText";
 import { Badge } from "@components/ui/Badge";
-
-const CompanyTag = (props: { name: string; url: string }) => {
-  const { name, url } = props;
-
-  return (
-    <a href={url} className="font-bold text-gray-200">
-      {name}
-    </a>
-  );
-};
 
 const Experience = () => {
   const { experiences } = PERSONAL_DETAILS;
+
+  const openInNewTab = (url: string) => {
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
 
   return (
     <motion.section
@@ -75,11 +70,13 @@ const Experience = () => {
                     {experience.description.map((desc, index) => {
                       if (typeof desc === "object") {
                         return (
-                          <CompanyTag
+                          <HoverCoverText
                             key={index}
-                            name={desc.name}
-                            url={desc.url}
-                          />
+                            className="font-bold text-gray-200"
+                            onClick={() => openInNewTab(desc.url)}
+                          >
+                            {desc.name}
+                          </HoverCoverText>
                         );
                       }
 

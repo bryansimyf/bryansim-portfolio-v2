@@ -119,7 +119,7 @@ export const PERSONAL_DETAILS = {
           name: "EZlife (social commerce, 250+ sellers, 210K+ transactions). ",
           url: "https://ezlive.biz/my-en",
         },
-        "Led UI/UX collaboration, built reusable components, designed APIs and database structures, and ensured seamless feature integrations. Worked on API consumption, dynamic state updates, and backend enhancements.",
+        " Led UI/UX collaboration, built reusable components, designed APIs and database structures, and ensured seamless feature integrations. Worked on API consumption, dynamic state updates, and backend enhancements.",
       ],
       techStack: [
         TECHSTACK_KEYS.PHP,

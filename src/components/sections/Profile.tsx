@@ -153,7 +153,7 @@ const Profile = () => {
             </div> */}
             <div className="font-vt323 text-responsive-4 px-4 py-2 border rounded-lg backdrop-blur-md bg-midnight-blue/30">
               Technologies I've recently worked with:
-              <ul className="grid grid-rows-3 grid-flow-col auto-cols-auto gap-2">
+              <ul className="grid grid-rows-3 grid-flow-col auto-cols-auto gap-1 text-responsive-3.5">
                 {PERSONAL_DETAILS.currentStack.map((stack, index) => (
                   <li key={index} className="flex gap-2">
                     {stack}
