@@ -4,8 +4,13 @@ import { resolve } from "path";
 import { defineConfig } from "vite";
 import svgr from "vite-plugin-svgr";
 
+import packageJson from "./package.json";
+
 // https://vite.dev/config/
 export default defineConfig({
+  define: {
+    __APP_VERSION__: JSON.stringify(packageJson.version),
+  },
   plugins: [react(), tailwindcss(), svgr()],
   resolve: {
     alias: {

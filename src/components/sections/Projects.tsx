@@ -4,7 +4,6 @@ import { PROJECTS_DETAILS } from "@constants/index";
 
 import HoverButton from "@components/common/HoverButton";
 import { Badge } from "@components/ui/Badge";
-import { Button } from "@components/ui/Button";
 import { Card } from "@components/ui/Card";
 interface PreviewCardProps {
   previewData: {

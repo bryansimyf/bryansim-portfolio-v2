@@ -8,7 +8,7 @@ const currentUrl = window.location.href;
 
 // App
 export const APP_INFO = {
-  version: "v0.0",
+  version: `v${__APP_VERSION__}`,
   lastUpdated: "2025-04-09",
 };
 
