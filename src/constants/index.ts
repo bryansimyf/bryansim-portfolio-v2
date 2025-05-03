@@ -1,3 +1,4 @@
+import dayjs from "dayjs";
 import { Briefcase, FolderOpen, User } from "lucide-react";
 
 import GithubIcon from "@assets/icons/brand-github.svg?react";
@@ -9,7 +10,7 @@ const currentUrl = window.location.href;
 // App
 export const APP_INFO = {
   version: `v${__APP_VERSION__}`,
-  lastUpdated: "2025-04-09",
+  lastUpdated: dayjs("2025-04-09").format("DD MMMM YYYY"),
 };
 
 // Layout
