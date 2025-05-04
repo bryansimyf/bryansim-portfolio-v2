@@ -2,6 +2,8 @@ import { useEffect, useRef, useState } from "react";
 import { ExternalLink, FolderGit2 } from "lucide-react";
 import { motion } from "motion/react";
 
+import useResponsive from "@hooks/useResponsive";
+
 import { PROJECTS_DETAILS } from "@constants/index";
 
 import HoverButton from "@components/common/HoverButton";
@@ -21,8 +23,10 @@ const ProjectTab = (props: PreviewCardProps) => {
   const { previewData } = props;
   const { name, image, repoUrl, url, description, techStack } = previewData;
 
-  const contentRef = useRef(null);
-  const [contentHeight, setContentHeight] = useState(0);
+  const { windowWidth } = useResponsive();
+
+  const contentRef = useRef<HTMLDivElement>(null);
+  const [contentHeight, setContentHeight] = useState<number>(0);
 
   const handleRedirect = (source: "github" | "project") => {
     window.open(
@@ -60,7 +64,13 @@ const ProjectTab = (props: PreviewCardProps) => {
   }, [description]);
 
   return (
-    <motion.div className="relative" initial="initial" whileHover="hover">
+    <motion.div
+      className="relative"
+      initial="initial"
+      {...(windowWidth <= 786
+        ? { whileInView: "hover", viewport: { once: true } }
+        : { whileHover: "hover" })}
+    >
       <img
         src={image}
         className="absolute inset-0 w-full h-full object-cover bg-gray-700 rounded-lg overflow-hidden border"
@@ -68,9 +78,9 @@ const ProjectTab = (props: PreviewCardProps) => {
       />
 
       <div className=" mt-24 backdrop-blur-md bg-gray-700/15 rounded-lg p-4 overflow-hidden">
-        <div className="flex justify-between items-center">
+        <div className="flex justify-between flex-col md:flex-row md:items-center">
           <span className="text-responsive-3.5 font-bold">{name}</span>
-          <div className="flex gap-2 text-responsive-3.5 font-vt323">
+          <div className="flex gap-2 text-responsive-3.5 font-vt323 flex-wrap">
             {techStack.map((stack, index) => (
               <span key={index}>{stack}</span>
             ))}

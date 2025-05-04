@@ -23,7 +23,8 @@
       "@constants/*": ["src/constants/*"],
       "@utils/*": ["src/utils/*"],
       "@lib/*": ["src/lib/*"],
-      "@providers/*": ["src/providers/*"]
+      "@providers/*": ["src/providers/*"],
+      "@hooks/*": ["src/hooks/*"]
     }
   },
   "include": ["src"], // Include only the `src` directory

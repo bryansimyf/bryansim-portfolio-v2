@@ -21,6 +21,7 @@ export default defineConfig({
       "@utils": resolve(__dirname, "./src/utils"),
       "@lib": resolve(__dirname, "./src/lib"),
       "@providers": resolve(__dirname, "./src/providers"),
+      "@hooks": resolve(__dirname, "./src/hooks"),
     },
   },
 });
