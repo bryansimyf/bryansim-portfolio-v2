@@ -78,14 +78,7 @@ const ProjectTab = (props: PreviewCardProps) => {
       />
 
       <div className=" mt-24 backdrop-blur-md bg-gray-700/15 rounded-lg p-4 overflow-hidden">
-        <div className="flex justify-between flex-col md:flex-row md:items-center">
-          <span className="text-responsive-3.5 font-bold">{name}</span>
-          <div className="flex gap-2 text-responsive-3.5 font-vt323 flex-wrap">
-            {techStack.map((stack, index) => (
-              <span key={index}>{stack}</span>
-            ))}
-          </div>
-        </div>
+        <span className="text-responsive-3.5 font-bold p-2">{name}</span>
 
         <motion.div
           ref={contentRef}
@@ -95,16 +88,23 @@ const ProjectTab = (props: PreviewCardProps) => {
           {description}
         </motion.div>
 
-        <div className="flex justify-end gap-2 mt-3">
-          <HoverButton onClick={() => handleRedirect("github")}>
-            Source <FolderGit2 />
-          </HoverButton>
-          <HoverButton
-            // variant="ghost"
-            onClick={() => handleRedirect("project")}
-          >
-            Link <ExternalLink />
-          </HoverButton>
+        <div className="flex items-center justify-between mt-2 flex-col gap-4 md:flex-row md:mt-0">
+          <div className="flex gap-2 text-responsive-3.5 font-vt323 flex-wrap">
+            {techStack.map((stack, index) => (
+              <span key={index}>{stack}</span>
+            ))}
+          </div>
+          <div className="flex justify-end gap-2">
+            <HoverButton onClick={() => handleRedirect("github")}>
+              Source <FolderGit2 />
+            </HoverButton>
+            <HoverButton
+              // variant="ghost"
+              onClick={() => handleRedirect("project")}
+            >
+              Link <ExternalLink />
+            </HoverButton>
+          </div>
         </div>
       </div>
     </motion.div>

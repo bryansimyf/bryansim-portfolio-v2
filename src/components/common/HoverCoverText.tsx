@@ -1,6 +1,8 @@
 import { ReactNode } from "react";
 import { motion } from "motion/react";
 
+import useResponsive from "@hooks/useResponsive";
+
 interface HoverCoverTextProps {
   children: ReactNode;
   className?: string;
@@ -10,10 +12,14 @@ interface HoverCoverTextProps {
 const HoverCoverText = (props: HoverCoverTextProps) => {
   const { children, className, ...rest } = props;
 
+  const { windowWidth } = useResponsive();
+
+  const isResponsive = windowWidth <= 786;
+
   const coverVariants = {
     rest: { width: "0%" },
     hover: {
-      width: "100%",
+      width: "auto",
       transition: {
         type: "tween",
         duration: 0.6, // now duration works
@@ -36,15 +42,16 @@ const HoverCoverText = (props: HoverCoverTextProps) => {
 
   return (
     <motion.div
-      className={`relative inline-block cursor-pointer w-fit ${className}`}
+      className={`relative inline-block cursor-pointer w-fit  ${className}`}
       initial="rest"
-      whileHover="hover"
-      animate="rest"
+      {...(isResponsive
+        ? { whileInView: "hover", viewport: { once: true } }
+        : { whileHover: "hover" })}
       {...rest}
     >
       <span>{children}</span>
       <motion.span
-        className="absolute left-0 top-0 overflow-hidden whitespace-nowrap text-cyan-300"
+        className="absolute left-0 top-0 text-cyan-300 overflow-hidden whitespace-nowrap"
         variants={coverVariants}
       >
         {children}
