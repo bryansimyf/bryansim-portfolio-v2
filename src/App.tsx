@@ -1,35 +1,35 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useEffect } from "react";
 
-function App() {
-  const [count, setCount] = useState(0)
+import Footer from "@components/layouts/Footer";
+import Header from "@components/layouts/Header";
+import Experience from "@components/sections/Experience";
+import Profile from "@components/sections/Profile";
+import Projects from "@components/sections/Projects";
+import { ShootingStars } from "@components/ui/ShootingStars";
+import { StarsBackground } from "@components/ui/StarsBackground";
+
+const App = () => {
+  // Auto scroll back to main
+  useEffect(() => {
+    window.history.scrollRestoration = "manual";
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="box-border  text-white min-h-[100dvh] font-poppins">
+        <ShootingStars />
+        <StarsBackground className="pointer-events-none" />
+        <Header />
+        <div className="relative z-1 flex flex-col gap-6 mx-auto w-full max-w-2xl pt-20 px-4">
+          <Profile />
+          <Experience />
+          <Projects />
+        </div>
+        <Footer />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
-}
+  );
+};
 
-export default App
+export default App;
