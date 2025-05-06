@@ -19,7 +19,7 @@ const Profile = () => {
 
   const handleDownloadResume = () => {
     const link = document.createElement("a");
-    link.href = "/resume/bryan_sim_resume.pdf";
+    link.href = `${import.meta.env.BASE_URL}/resume/bryan_sim_resume.pdf`;
     link.download = "bryan_sim_resume.pdf";
     link.target = "_blank";
     link.rel = "noopener noreferrer";
