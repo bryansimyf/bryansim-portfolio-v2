@@ -15,7 +15,7 @@ A personal web portfolio built with [Vite](https://vitejs.dev), created to explo
 
 ```bash
 # Clone the repo
-git clone https://github.com/SushiMeliodas/my-portfolio-v2.git
+git clone https://github.com/SushiMeliodas/bryansim-portfolio-v2.git
 
 # Install dependencies
 cd my-portfolio-v2
