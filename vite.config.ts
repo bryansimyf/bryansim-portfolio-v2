@@ -8,6 +8,7 @@ import packageJson from "./package.json";
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: "/bryansim-portfolio-v2",
   define: {
     __APP_VERSION__: JSON.stringify(packageJson.version),
   },
