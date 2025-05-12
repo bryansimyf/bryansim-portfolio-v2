@@ -21,7 +21,7 @@ export const NAV_ITEMS = [
 ];
 
 export const SOCIAL_ITEMS = [
-  { name: "Github", icon: GithubIcon, url: "https://github.com/SushiMeliodas" },
+  { name: "Github", icon: GithubIcon, url: "https://github.com/bryansimyf" },
   {
     name: "Linkedin",
     icon: LinkedinIcon,
