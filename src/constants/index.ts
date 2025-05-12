@@ -146,7 +146,7 @@ export const PERSONAL_DETAILS = {
 export const PROJECTS_DETAILS = [
   {
     name: "bryansim.dev",
-    repoUrl: "https://github.com/SushiMeliodas/my-portfolio-v2",
+    repoUrl: "https://github.com/bryansimyf/bryansim-portfolio-v2",
     url: currentUrl,
     image: BryansimDevScreenShot,
     description:
