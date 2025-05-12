@@ -10,7 +10,7 @@ const currentUrl = window.location.href;
 // App
 export const APP_INFO = {
   version: `v${__APP_VERSION__}`,
-  lastUpdated: dayjs("2025-05-05").format("DD MMMM YYYY"),
+  lastUpdated: dayjs("2025-05-12").format("DD MMMM YYYY"),
 };
 
 // Layout
@@ -21,7 +21,7 @@ export const NAV_ITEMS = [
 ];
 
 export const SOCIAL_ITEMS = [
-  { name: "Github", icon: GithubIcon, url: "https://github.com/SushiMeliodas" },
+  { name: "Github", icon: GithubIcon, url: "https://github.com/bryansimyf" },
   {
     name: "Linkedin",
     icon: LinkedinIcon,
