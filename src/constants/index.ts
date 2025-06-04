@@ -67,6 +67,7 @@ export const PERSONAL_DETAILS = {
     TECHSTACK_KEYS.MUI,
     TECHSTACK_KEYS.REDUX,
     TECHSTACK_KEYS.MOTION,
+    TECHSTACK_KEYS.REACT_NATIVE,
   ],
   experiences: [
     {

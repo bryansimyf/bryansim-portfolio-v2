@@ -61,10 +61,12 @@ const Experience = () => {
                   className="flex flex-col gap-2 pt-1 px-2 pb-8 w-full"
                 >
                   <span className="text-responsive-3">
-                    {experience.startDate}
+                    {`${experience.startDate} - ${
+                      isCurrent ? "Present" : experience.endDate
+                    }`}
                   </span>
                   <p className="text-responsive-3.25 font-semibold">
-                    {experience.title} - {experience.company}
+                    {`${experience.title} - ${experience.company}`}
                   </p>
                   <div className="text-responsive-3 text-gray-300 break-words mb-2">
                     {experience.description.map((desc, index) => {
