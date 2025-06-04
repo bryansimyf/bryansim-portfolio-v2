@@ -2,7 +2,7 @@
   "name": "my-portfolio-v2",
   "homepage": "https://bryansimyf.github.io/bryansim-portfolio-v2/",
   "private": true,
-  "version": "1.0.3",
+  "version": "1.0.4",
   "type": "module",
   "scripts": {
     "dev": "vite",
