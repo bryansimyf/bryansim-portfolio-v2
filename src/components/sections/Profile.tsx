@@ -34,7 +34,7 @@ const Profile = () => {
         <motion.div
           layout
           id="profile-banner-wrapper"
-          className="relative h-30 md:h-44 overflow-hidden"
+          className="relative h-30 md:h-44 overflow-hidden rounded-tl-3xl rounded-tr-3xl"
           initial={{ ...TRANSITIONS.fadeUp.initial, filter: "blur(10px)" }}
           animate={{ ...TRANSITIONS.fadeUp.animate, filter: "blur(0px)" }}
           transition={{
