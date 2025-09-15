@@ -51,7 +51,7 @@ const ProjectTab = (props: PreviewCardProps) => {
         // duration: 0.4,
         // ease: [0.4, 0, 0.2, 1],
         // type: "tween",
-        height: { duration: 0.3, ease: "easeInOut" },
+        height: { duration: 0.3, ease: "easeInOut" as const },
         opacity: { duration: 0.25, delay: 0.05 },
       },
     },
