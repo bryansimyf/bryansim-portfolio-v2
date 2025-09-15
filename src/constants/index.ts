@@ -10,7 +10,7 @@ const currentUrl = window.location.href;
 // App
 export const APP_INFO = {
   version: `v${__APP_VERSION__}`,
-  lastUpdated: dayjs("2025-06-04").format("DD MMMM YYYY"),
+  lastUpdated: dayjs("2025-09-15").format("DD MMMM YYYY"),
 };
 
 // Layout
