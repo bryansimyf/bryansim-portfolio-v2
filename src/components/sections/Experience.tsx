@@ -19,6 +19,8 @@ const Experience = () => {
       className="scroll-mt-nav"
       initial={TRANSITIONS.fadeUp.initial}
       animate={TRANSITIONS.fadeUp.animate}
+      // whileInView={TRANSITIONS.fadeUp.animate}
+      // viewport={{ once: true }}
       transition={{
         ...TRANSITIONS.fadeUp.transition,
         delay: 0.6,

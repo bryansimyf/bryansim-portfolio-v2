@@ -21,9 +21,9 @@ const HoverCoverText = (props: HoverCoverTextProps) => {
     hover: {
       width: "auto",
       transition: {
-        type: "tween",
+        type: "tween" as const,
         duration: 0.6, // now duration works
-        ease: "easeInOut",
+        ease: "easeInOut" as const,
       },
     },
   };
@@ -33,9 +33,9 @@ const HoverCoverText = (props: HoverCoverTextProps) => {
     hover: {
       scaleX: 1,
       transition: {
-        type: "tween",
+        type: "tween" as const,
         duration: 0.6,
-        ease: "easeInOut",
+        ease: "easeInOut" as const,
       },
     },
   };
