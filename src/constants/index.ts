@@ -58,7 +58,7 @@ export const PERSONAL_DETAILS = {
   greetMessage: "Hi, I'm Bryan Sim!",
   slogan: "Engineering the frontend, enhancing the experience.",
   description:
-    "I'm a software engineer with 4 years of experience, specializing in frontend development. I build scalable and high-performance web applications with modern technologies. 🚀",
+    "👨‍💻 I’m a software engineer who enjoys building fast, reliable, and clean web apps. I focus mainly on frontend development and love working with modern tools to bring ideas to life.",
   currentStack: [
     TECHSTACK_KEYS.JAVASCRIPT,
     TECHSTACK_KEYS.TYPESCRIPT,
@@ -172,7 +172,7 @@ export const TRANSITIONS = {
     },
     transition: {
       // duration: 0.4,
-      type: "spring",
+      type: "spring" as const,
       stiffness: 100, // default 1 resistance to movement
       damping: 20, // default 10 bounce factor
       mass: 0.5, // default 1
