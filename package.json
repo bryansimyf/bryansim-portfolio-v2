@@ -9,9 +9,9 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "bump:patch": "npm version patch && node scripts/updateProjectMeta.ts",
-    "bump:minor": "npm version minor && node scripts/updateProjectMeta.ts",
-    "bump:major": "npm version major && node scripts/updateProjectMeta.ts",
+    "bump:patch": "npm version patch --no-git-tag-version && node scripts/updateProjectMeta.ts",
+    "bump:minor": "npm version minor --no-git-tag-version && node scripts/updateProjectMeta.ts",
+    "bump:major": "npm version major --no-git-tag-version && node scripts/updateProjectMeta.ts",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
