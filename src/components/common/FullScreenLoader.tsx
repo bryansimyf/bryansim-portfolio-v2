@@ -32,8 +32,8 @@ const FullScreenLoader = () => {
       opacity: 1,
       y: 60 - 2 * progress,
       transition: {
-        type: "tween",
-        ease: "easeOut",
+        type: "tween" as const,
+        ease: "easeOut" as const,
         duration: 0.4,
         // This tells children to stagger their animations
         // staggerChildren: 0.1, // Time delay between each child animation
@@ -53,7 +53,7 @@ const FullScreenLoader = () => {
       y: 0,
       scale: custom === progress ? 2 : 1,
       transition: {
-        type: "spring",
+        type: "spring" as const,
         stiffness: 100,
         damping: 12,
         mass: 0.8,
