@@ -10,7 +10,7 @@ const currentUrl = window.location.href;
 // App
 export const APP_INFO = {
   version: `v${__APP_VERSION__}`,
-  lastUpdated: dayjs("2025-09-15").format("DD MMMM YYYY"),
+  lastUpdated: dayjs("2026-03-13").format("DD MMMM YYYY"),
 };
 
 // Layout
@@ -118,7 +118,7 @@ export const PERSONAL_DETAILS = {
         },
         " (micro-influencing) and ",
         {
-          name: "EZlife",
+          name: "EZlive",
           url: "https://ezlive.biz/my-en",
         },
         " (social commerce, 250+ sellers, 210K+ transactions). Led UI/UX collaboration, built reusable components, designed APIs and database structures, and ensured seamless feature integrations. Worked on API consumption, dynamic state updates, and backend enhancements.",
