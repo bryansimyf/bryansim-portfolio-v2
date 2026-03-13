@@ -118,7 +118,7 @@ export const PERSONAL_DETAILS = {
         },
         " (micro-influencing) and ",
         {
-          name: "EZlife",
+          name: "EZlive",
           url: "https://ezlive.biz/my-en",
         },
         " (social commerce, 250+ sellers, 210K+ transactions). Led UI/UX collaboration, built reusable components, designed APIs and database structures, and ensured seamless feature integrations. Worked on API consumption, dynamic state updates, and backend enhancements.",
