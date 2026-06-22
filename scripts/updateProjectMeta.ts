@@ -10,7 +10,7 @@ const __dirname = path.dirname(__filename);
 // const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, "utf8"));
 // const PACKAGE_VERSION = packageJson.version;
 
-const CONSTANT_PATH = path.resolve(__dirname, "../src/constants/index.ts");
+const CONSTANT_PATH = path.resolve(__dirname, "../src/constants/app.ts");
 const TODAY = new Date().toISOString().split("T")[0]; // format: YYYY-MM-DD
 
 // Read the file
