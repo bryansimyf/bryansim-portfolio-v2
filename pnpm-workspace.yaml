@@ -1,3 +1,9 @@
-onlyBuiltDependencies:
-  - '@tailwindcss/oxide'
-  - esbuild
+allowBuilds:
+  esbuild: true
+  '@tailwindcss/oxide': true
+
+minimumReleaseAgeExclude:
+  - brace-expansion@5.0.8
+
+overrides:
+  brace-expansion: ">=5.0.8"
